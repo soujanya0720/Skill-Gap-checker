@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: linear-gradient(
+        135deg,
+        #667eea,
+        #764ba2
+    );
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+
+.converter {
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #777;
+
+    margin-bottom: 30px;
+}
+
+
+/* Amount */
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 2px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+
+    background: white;
+}
+
+input:focus,
+select:focus {
+    border-color: #667eea;
+}
+
+
+/* Currency section */
+
+.currency-section {
+    display: flex;
+
+    align-items: end;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.currency-box {
+    flex: 1;
+}
+
+.currency-box select {
+    cursor: pointer;
+}
+
+
+/* Swap */
+
+.swap-btn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.swap-btn:hover {
+    transform: rotate(180deg);
+}
+
+
+/* Convert button */
+
+.convert-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #667eea;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.convert-btn:hover {
+    background: #5568d9;
+}
+
+
+/* Result */
+
+.result {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #f5f7ff;
+
+    text-align: center;
+}
+
+#resultText {
+    color: #666;
+
+    margin-bottom: 10px;
+}
+
+#convertedAmount {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+#rateText {
+    color: #777;
+}
+
+
+/* Loading */
+
+.loading {
+    display: none;
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #667eea;
+}
+
+
+/* Error */
+
+.error {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    background: #ffe5e5;
+
+    color: #d63031;
+}
+
+
+/* Updated time */
+
+.updated-time {
+    text-align: center;
+
+    color: #888;
+
+    font-size: 13px;
+
+    margin-top: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .converter {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .currency-section {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .swap-btn {
+        align-self: center;
+
+        transform: rotate(90deg);
+    }
+
+    .swap-btn:hover {
+        transform: rotate(270deg);
+    }
+
+}
